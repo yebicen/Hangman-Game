@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Hangman!</title> 
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+ <link href="https://fonts.googleapis.com/css?family=Coiny|Flavors" rel="stylesheet">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    
+
+<div class="container">
+<div class="row">
+<img src="assets/images/hangman.jpg" alt="Hangman Game!">
+</div>
+
+<div class="row">
+    <div class="col-6" >
+        <img id="coolimage" src="#" alt="Hangman GAme!">
+    </div>
+
+    <div class="col-6" id="game">
+            <p>PRESS ANY KEY TO GET STARTED! </p>
+    </div>
+
+</div>
+
+
+</div>
+
+ <script>
+
+var wins = 0;
+var times = 10;
+var guess =[];
+
+ // Create an array of words
+ var library = [
+ "javascript",
+ "monkey",
+ "amazing",
+ "pancake"
+ ];
+
+
+
+
+ // Pick a random word
+ var word = library [Math.floor(Math.random() * library .length)];
+console.log (word)
+//  Set up the answer array
+ var guessField = [];
+ for (var i = 0; i < word.length; i++) {
+guessField[i] = "_";
+ }
+ 
+ var remainingLetters = word.length;
+ console.log(remainingLetters);
+
+
+
+document.onkeyup = function(event) {
+var userGuess = event.key;
+//  The game loop
+ if (remainingLetters > 0) {
+
+ // Update the game state with the guess
+ for (var j = 0; j < word.length; j++) {
+ 
+ if (word[j] === userGuess) {
+ guessField[j] = userGuess;
+ remainingLetters-=1;
+ }
+
+else{
+   times--;
+ }
+ console.log(times);
+
+ }
+ console.log(guessField);
+
+  guess.push(userGuess); 
+ }
+
+ 
+
+ 
+
+// Creating a variable to hold our new HTML. Our HTML now keeps track of the user and computer guesses, and wins/losses etc.
+
+var html =
+        "<p>PRESS ANY KEY TO GET STARTED! </p>" +
+          "<p>Wins " + wins + "</p>" +
+          "<p>CURRENT WORD " + guessField + "</p>"+
+          "<p>NUMBERS OF GUESSES REMAINING " + times + "</p>"+
+          "<p>lETTERS ALREADY GUESSED " + guess + "</p>";
+
+   
+   
+        // Set the inner HTML contents of the #game div to our html string
+       
+        document.querySelector("#game").innerHTML = html;
+       
+ // The end of the game loop
+ };
+ 
+ 
+ </script>
+</body>
+</html>
