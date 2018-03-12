@@ -1,12 +1,25 @@
 img{
     margin:auto;
     margin-bottom: 80px;
+    
 }
+
+#coolimage{
+width:350px;
+}
+
+#imageframe{
+border-right: 10px dotted white;
+}
+
 .container{
+    padding:15px;
     background-color: #4aaaa5;
-    margin-top:200px;
+    border: 10px dotted white;
 }
 
 p{
     font-family: 'Coiny', cursive;
+    font-size: 25px;
 }
+
