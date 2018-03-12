@@ -56,16 +56,16 @@ function displayAudio(word){
 // Create a function to change background color
 function background(word) {
     if (word === "ducky"){
-    document.body.style.backgroundColor = "orange";}
+    document.body.style.backgroundColor = "#ffffb3";}
 
      if (word === "monkey"){
-    document.body.style.backgroundColor = "blue";}
+    document.body.style.backgroundColor = "#99bbff";}
 
      if (word === "panda"){
     document.body.style.backgroundColor = "grey";}
 
       if (word === "pancake"){
-    document.body.style.backgroundColor = "cyan";}
+    document.body.style.backgroundColor = "#ffcccc";}
 }
 
 //When user open up or refresh the page, gameloop starts
