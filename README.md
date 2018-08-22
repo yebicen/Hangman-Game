@@ -4,7 +4,8 @@ https://yebicen.github.io/Hangman-Game/
 Press any key to get started!
 
 - Wins: (# of times user guessed the word correctly).
-If the word is holiday, display it like this when the game starts: _ _ _ _ _ _ _.
+If the word is holiday, 
+You will see this when the game starts: _ _ _ _ _ _ _.
 As the user guesses the correct letters, reveal them: h o l i _  _ y.
 
 
