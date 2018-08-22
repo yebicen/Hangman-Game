@@ -14,3 +14,8 @@ Letters Already Guessed: (Letters the user has guessed, displayed like L Z Y H).
 After the user wins/loses the game will choose another word and make the user play it.
 
 - The webpage will play a audio related to the user's guesses.
+
+
+- Try it:
+pancake
+ducky
