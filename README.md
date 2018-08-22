@@ -17,5 +17,5 @@ After the user wins/loses the game will choose another word and make the user pl
 
 
 - Try it:
-pancake
+pancake;
 ducky
