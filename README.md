@@ -1,2 +1,2 @@
 # Hangman-Game
-Week 3 Homework (Part B)
+https://yebicen.github.io/Hangman-Game/
